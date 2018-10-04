@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- jQuery JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Tabbing functions -->
+  <script src="js/tabbing.js"></script>
+
+  <!-- Form functions -->
+  <script src="js/form.js"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+
+    <img id="logo" src="images/insure-quoter-logo-black.svg" />
+    <div class="col-sm-4 offset-sm-7" id="header-phone">
+        <h4 class="text-right" id="title-phone">Speak to a licensed agent:</h2>
+        <h5 class="float-right">888-201-5723</h5>
+        <img id="icon-phone" src="images/glyphicons-442-phone-alt.png" class="float-right"/>
+    </div>
+
+  </header>
+  <div class="container">
+      <h1 class="text-center" id="page-title">Health Insurance quotes in minutes - <strong class="text-danger">Save up to 30%</strong></h1>
+  </div>
+
+
+  <div class="container card bg-transparent mx-auto form" id="form-card">
+      <div class="card-body">
+          <h5 class="card-title text-center" id="form-title"><strong class="accent-title text-danger">Free quotes</strong> from top insurance providers in just a few easy steps.</h5>
+
+  <form>
+      <div class="form-row">
+          <!-- First Name -->
+          <div class="form-group col-sm-6">
+              <input type="text" class="form-control" id="firstName" placeholder="First Name">
+          </div>
+          
+          <!-- Last Name -->
+          <div class="form-group col-sm-6">
+              <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+          </div>
+      </div>
+      <div class="form-row">
+
+          <!-- Phone -->
+          <div class="form-group col-sm-6">
+              <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+          </div>
+
+          <!-- Email -->
+          <div class="form-group col-sm-6">
+              <input type="email" class="form-control" id="email" placeholder="Email Address">
+          </div>
+      </div>
+      <div class="form-row">
+          <!-- Address -->
+
+          <div class="form-group col-sm-8">
+              <input type="text" class="form-control" id="address" placeholder="Street Address">
+          </div>
+          <!-- Zipcode -->
+          <div class="form-group col-sm-4">
+              <input type="text" class="form-control" id="zipcode" placeholder="Zipcode">
+          </div>
+      </div>
+      <div class="form-row">
+
+          <!-- Birthdate -->
+          
+          <div class="form-group col-sm-8">
+              <div class="btn-group btn-group-sm d-flex">
+                  <div class="btn-group btn-group-sm w-100" role="group">
+                      <span class="btn btn-sm disabled w-100" style="cursor: auto">Birthdate:</span>
+
+                      <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-month" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Month</button>
+                      <div class="dropdown-menu" id="month" aria-labelledby="dropdown-month">
+                          <h6 class="dropdown-header">Month</h6>
+                          <button class="dropdown-item" type="button">01</button>
+                          <button class="dropdown-item" type="button">02</button> 
+                      </div>
+                  </div>
+                  <div class="btn-group btn-group-sm" role="group">
+                      <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-day" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Day</button>
+                      <div class="dropdown-menu" id="day" aria-labelledby="dropdown-day">
+                          <h6 class="dropdown-header">Day</h6>
+                          <button class="dropdown-item" type="button">01</button>
+                          <button class="dropdown-item" type="button">02</button> 
+                      </div>
+                  </div>
+                  <div class="btn-group btn-group-sm" role="group">
+                      <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-year" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Year</button>
+                      <div class="dropdown-menu" id="year" aria-labelledby="dropdownMenu3">
+                          <h6 class="dropdown-header">Year</h6>
+                          <button class="dropdown-item" type="button">01</button>
+                          <button class="dropdown-item" type="button">02</button> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Gender -->
+          <div class="form-group col-sm-4">
+              <div class="btn-group btn-group-sm d-flex" role="group">
+                  <span class="btn btn-sm disabled w-100">Gender</span>
+                  <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-gender" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select...</button>
+                  <div class="dropdown-menu" id="gender" aria-labelledby="dropdown-gender">
+                      <h6 class="dropdown-header">Gender</h6>
+                      <button class="dropdown-item" type="button">F</button>
+                      <button class="dropdown-item" type="button">M</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+
+          <!-- Stats -->
+          <div class="form-group col-sm-6">
+              <div class="btn-group btn-group-sm d-flex" role="group">
+                  <span class="btn btn-sm disabled w-100" style="cursor: auto">Weight</span>
+
+                  <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-weight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">lbs.</button>
+                  <div class="dropdown-menu" id="weight" aria-labelledby="dropdown-weight">
+                      <h6 class="dropdown-header">Weight</h6>
+                      <button class="dropdown-item" type="button">4'</button>
+                      <button class="dropdown-item" type="button">5'</button> 
+                      <button class="dropdown-item" type="button">6'</button> 
+                      <button class="dropdown-item" type="button">7'</button> 
+                  </div>
+              </div>
+          </div>
+
+          <div class="form-group col-sm-6">
+              <div class="btn-group btn-group-sm d-flex" role="group">
+                  <div class="btn-group btn-group-sm w-100" role="group">
+                      <span class="btn btn-sm disabled w-100">Height</span>
+                      <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-height-ft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ft.</button>
+                      <div class="dropdown-menu" id="height-ft" aria-labelledby="dropdown-height-ft">
+                          <h6 class="dropdown-header">Ft.</h6>
+                          <button class="dropdown-item" type="button">7'</button>
+                          <button class="dropdown-item" type="button">8'</button> 
+                      </div>
+                  </div>
+                  <div class="btn-group btn-group-sm" role="group">
+                      <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-height-in" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">In.</button>
+                      <div class="dropdown-menu" id="height-in" aria-labelledby="dropdown-height-in">
+                          <h6 class="dropdown-header">In.</h6>
+                          <button class="dropdown-item" type="button">0"</button>
+                          <button class="dropdown-item" type="button">1"</button> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="form-group col-sm-6">
+              <div class="btn-group btn-group-sm d-flex" role="group">
+                  <span class="btn btn-sm disabled w-100">Family Size:</span>
+                  <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-family" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Size...</button>
+                  <div class="dropdown-menu" id="family" aria-labelledby="dropdown-family">
+                      <h6 class="dropdown-header">Size</h6>
+                      <button class="dropdown-item" type="button">1</button>
+                      <button class="dropdown-item" type="button">2</button> 
+                      <button class="dropdown-item" type="button">3</button>
+                      <button class="dropdown-item" type="button">4</button> 
+                      <button class="dropdown-item" type="button">5+</button> 
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="form-group col-sm-6">
+              <div class="btn-group btn-group-sm d-flex" role="group">
+                  <span class="btn btn-sm disabled w-100">Income:</span>
+                  <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-income" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Income...</button>
+                  <div class="dropdown-menu" id="income" aria-labelledby="dropdown-income">
+                      <h6 class="dropdown-header">Income</h6>
+                      <button class="dropdown-item" type="button">$10k - $20k</button>
+                      <button class="dropdown-item" type="button">$20k - $40k</button> 
+                      <button class="dropdown-item" type="button">$40k - $70k</button>
+                      <button class="dropdown-item" type="button">$70k+</button> 
+                  </div>
+              </div>
+          </div>
+      <!-- end of form-row -->
+      </div>
+      <div class="form-actions text-center">
+      
+          <button class="btn btn-sm btn-danger">GET YOUR FREE QUOTE!</button>
+      </div>
+
+
+
+
+
+
+        
+    </div>
+
+  </div>
+
+  </form>
+  </div>
+  </div>
+
+  <!--
+  <h1 id="heading">Why should you pay more for <strong>health insurance?</strong></h1>
+  -->
+
+  <div id="spacer">
+  </div>
+
+  <div class="container panel1">
+      <h2 class="text-center carousel-header"><strong>Getting a quote on your health insurance has never been easier.</strong></h2>
+      <div class="svg-container">
+        <svg class="checklist" viewBox="0 0 223.89 279.5">
+          <rect class="checklist-outline" x="5.5" y="5.5" width="212.89" height="268.5"/>
+          <line class="checklist-lines" id="checklist-line-1" x1="55.94" y1="90.39" x2="167.95" y2="90.39"/>
+          <line class="checklist-lines" id="checklist-line-2" x1="55.94" y1="128.27" x2="167.95" y2="128.27"/>
+          <line class="checklist-lines" id="checklist-line-3" x1="55.94" y1="166.16" x2="167.95" y2="166.16"/>
+          <line class="checklist-lines" id="checklist-line-4" x1="55.94" y1="204.04" x2="167.95" y2="204.04"/>
+          <polyline class="checklist-checkmark" points="146.91 41.1 164.61 58.8 197.18 26.22"/>
+        </svg>
+        <p class="svg-text" id="svg-text-1">
+          Tell us a little about yourself.
+        </p>
+      </div>
+      <div class="svg-container">
+        <svg class="computer" viewBox="0 0 124 114">
+            <rect class="computer-panels" x="42" y="82" width="40" height="20"/>
+            <rect class="computer-panels" x="2" y="2" width="120" height="80" rx="12" ry="12"/>
+            <rect class="computer-screen" x="12" y="12" width="100" height="60" rx="3.57" ry="3.57"/>
+            <rect class="computer-base" x="2" y="102" width="120" height="10"/>
+            <line class="computer-lines" id="computer-line-1" x1="32" y1="32" x2="92" y2="32"/>
+            <line class="computer-lines" id="computer-line-2" x1="32" y1="45.33" x2="92" y2="45.33"/>
+            <line class="computer-lines" id="computer-line-3" x1="32" y1="58.67" x2="92" y2="58.67"/>
+            <rect class="computer-blip" x="97" y="17" width="10" height="10" rx="2.21" ry="2.21"/>
+        </svg>
+        <p class="svg-text" id="svg-text-2">
+          We'll generate a list of providers that fit for you.
+        </p>
+      </div>
+      <div class="svg-container">
+        <svg class="cross" viewBox="0 0 100 100">
+            <circle class="cross-border" id="cross-border-1" cx="48.84" cy="48.84" r="47.84"/>
+            <circle class="cross-border" id="cross-border-2" cx="48.84" cy="48.84" r="45.87"/>
+            <path class="cross-cross" d="M76.64,36.45H61.22V21A4.25,4.25,0,0,0,57,16.79H40.7A4.25,4.25,0,0,0,36.45,21V36.45H21a4.25,4.25,0,0,0-4.25,4.25V57A4.25,4.25,0,0,0,21,61.22H36.45V76.64a4.24,4.24,0,0,0,4.25,4.24H57a4.24,4.24,0,0,0,4.25-4.24V61.22H76.64A4.24,4.24,0,0,0,80.88,57V40.7A4.24,4.24,0,0,0,76.64,36.45Z"/>
+        </svg>
+        <p class="svg-text" id="svg-text-3">
+          Relax knowing that you and your family are insured.
+        </p>
+      </div>
+
+  </div>
+  <!-- <div class="panel2">
+      <h2 class="text-center scroll-text">Insurance doesn't have to be hard.</h2>
+      <div class="text-center scroll-button">
+        <button type="button" onclick="topScroll()" class="btn btn-success">Get a Quote Now!</button>
+      </div>
+
+  </div> -->
+
+  <div class="panel2 bg-danger">
+      <div class="row">
+          <div class="col-sm-3 offset-sm-2 card rate-div">
+              <div class="card-body">
+                  <h1 class="text-center text-danger rate">Starting at $15/month</h1>
+              </div>
+          </div>
+          <div class="col-sm-5">
+              <div class="my-auto">
+                  <h3 class="text-center align-middle agent">SPEAK TO AN AGENT NOW!</h3>
+                  <h3 class="text-center agent">Call 888-201-5723</h3>
+                  <hr />
+                  <h5 class="text-center agent">Coverage amounts ranging up to $75k</h5>
+                  <p class="text-center agent">As with everything, the insurance landscape has shifted to digital. We're here to answer any questions you might have and help you get the best price.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="panel3">
+      <div class="mx-auto info">
+          <h1 class="text-center"><strong>What is <span class="text-danger">Cancer Insurance?</span></strong></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h5><strong>What does it <span class="text-danger">provide?</span></strong></h5>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <h5><strong>What are the benefits of purchasing <span class="text-danger">Cancer Insurance?</span></strong></h5>
+          <ul>
+            <li>Excepteur sint occaecat cupidatat non proident,</li>
+            <li>sunt in culpa qui officia deserunt,</li>
+            <li>mollit <strong>anim id est laborum.</strong></li>
+          </ul>
+      </div>
+  </div>
+  <div class="panel4 text-center">
+      <h1 class="text-center"><strong>Looking for health insurance?</strong></h1>
+      <h1 class="text-center agent"><strong>Let us do the heavy lifting for you.</strong></h1>
+      <hr class="col-sm-6 offset-sm-3"/>
+      <p class="text-center agent">We'll guide you through the whole process of getting insured.</p>
+      <button class="btn btn-danger text-center return-btn" onclick="scrollToTop()"><h2><strong>GET QUOTE NOW</strong></h2></button>
+  </div>
+
+
+  <!-- TERMS OF USE -->
+  <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="termsModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  terms of use
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- PRIVACY POLICY -->
+  <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="privacyModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  lorem ipsum
+              </div>
+          </div>
+      </div>
+  </div>
+<!--
+  <footer>
+      <div class="footer-top">
+          <span class="copyright">© 2018 Home Loan Quoter</span>
+          <span class="disclaimer cursor" data-toggle="modal" data-target="#privacyModal">Privacy Policy</span>
+          <span class="disclaimer">|</span>
+          <span class="disclaimer cursor" type="button" data-toggle="modal" data-target="#termsModal">Terms of Use</span>
+      </div>
+
+
+  </footer>
+-->
+
+  <!-- SVG Animations -->
+  <script src="js/animation.js"></script>
+
+</body>
+
+</html>
